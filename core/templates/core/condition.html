@@ -1,0 +1,80 @@
+{% extends 'index.html' %}
+{% load static %}
+
+{% block header %}
+    <img class="arrow" src="{% static 'img/Arrow.png' %}"/>
+    <p>정보확인</p>
+{% endblock %}
+{% block section %}
+    <div>
+        {% if unnormal %}
+            <div class="text-center">
+                <img src="{% static 'img/!.png' %}">
+            </div>
+            <div class="text-center font26 bold" style="color: #EB5757">
+                <p>다른 백신을 접종하세요</p>
+                <div class="text-center font14 opacity50" style="margin-bottom: 39px;"><p>유통/보관 과정에서의 문제가 탐지되었습니다.</p></div>
+            </div>
+        {% else %}
+            <div class="text-center">
+                <img src="{% static 'img/Union.png' %}">
+            </div>
+            <div class="text-center font26 bold">
+                <p>유통, 보관 상태가 좋습니다</p>
+            </div>
+        {% endif %}
+        <div class="confirm_box text-center font16 bold"><a
+                href="{% url 'logistics' vaccine_type=vaccine_type pk=pk %}">유통/보관 이력 확인하기</a></div>
+        <div class="product_info_wrapper">
+            <div class="product_upper_wrapper">
+                <div class="product_upper_img">
+                    <img src="{% static 'img/covid.png' %}">
+                </div>
+                <div>
+                    <div style="margin-bottom: 4px">
+                        <img src="{% static 'img/comlogo.png' %}"/>
+                    </div>
+                    <div class="font21 bold" style="margin-bottom: 19px">
+                        {{ name }}
+                    </div>
+                    <div class="phone_button font12">
+                        <div>
+                            <img style="width: 14px;height: 14px;" src="{% static 'img/phone60.png' %}"/>
+                            <span>&nbsp;한국화이자</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hr"></div>
+            <div class="product_lower_wrapper">
+                <div class="product_lower_info_wrapper" style="margin-bottom: 22px">
+                    <div class="product_info_left font12 opacity30">
+                        제품코드
+                    </div>
+                    <div class="font14 opacity90">
+                        {{ name }}_{{ pk }}
+                    </div>
+                </div>
+                <div class="product_lower_info_wrapper" style="margin-bottom: 22px">
+                    <div class="product_info_left font12 opacity30">
+                        접종병원
+                    </div>
+                    <div class="font14 opacity90">
+                        푸른내과의원
+                    </div>
+                </div>
+                <div class="product_lower_info_wrapper">
+                    <div class="product_info_left font12 opacity30">
+                        관리책임자
+                    </div>
+                    <div class="font14 opacity90">
+                        <a href="https://explorer.blockchain.line.me/cashew/address/{{ address }}" target="_blank">
+                            <img style="width: 14px;height: 14px;" src="{% static 'img/phone60.png' %}"/>
+                            <span>&nbsp;{{ admin_name }}</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,62 @@
+{% extends 'index.html' %}
+{% load static %}
+
+{% block header %}
+    <a href="{% url 'logistics' vaccine_type=vaccine_type pk=vaccine_pk %}">
+        <img class="arrow" src="{% static 'img/Arrow.png' %}"/>
+    </a>
+    <p>상세 이력</p>
+{% endblock %}
+{% block section %}
+    <div>
+        <div class="condition_detail_upper_wrapper">
+            <img src="{% static 'img/condition_sample.png' %}">
+        </div>
+        <div class="condition_detail_lower_wrapper">
+            <div class="condition_detail_row">
+                <div class="row_left font12">제품코드</div>
+                <div class="row_right font14">{{ code }}</div>
+            </div>
+            <div class="condition_detail_row">
+                <div class="row_left font12">관리책임자</div>
+                <div class="row_right font14">{{ admin_name }}</div>
+            </div>
+            <div class="condition_detail_row">
+                <div class="row_left font12">입고날짜</div>
+                <div class="row_right font14">2020.12.19</div>
+            </div>
+            <div class="condition_detail_row">
+                <div class="row_left font12">보관장소</div>
+                <div class="row_right font14">A-120 냉장고 C열 11번</div>
+            </div>
+            <div class="condition_detail_row">
+                <div class="row_left font12">적정온도</div>
+                {% if unnormal %}
+                    <div class="row_right font14" style="color: #EB5757">{{ max_temp }}℃ ~ {{ min_temp }}℃</div>
+                {% else %}
+                    <div class="row_right font14">{{ max_temp }}℃ ~ {{ min_temp }}℃</div>
+                {% endif %}
+            </div>
+            <div class="condition_detail_row">
+                <div class="row_left font12">보관온도</div>
+                <div class="row_right font14">{{ temp }}℃</div>
+            </div>
+            <div class="condition_detail_row">
+                <div class="row_left font12">장비검수</div>
+                <div class="row_right font14">2020.12.19 온도 체크 완료</div>
+            </div>
+            <div class="condition_detail_row">
+                <div class="row_left font12">TXID</div>
+                <a href="https://explorer.blockchain.line.me/cashew/transaction/{{ TXID }}/?tab=memo">
+                    <div class="row_right font14" style="word-break: break-all">
+                        {{ TXID }}
+                    </div>
+                </a>
+
+            </div>
+        </div>
+        <div class="condition_detail_footer">
+
+        </div>
+    </div>
+{% endblock %}

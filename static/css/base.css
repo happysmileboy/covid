@@ -1,0 +1,249 @@
+html, body {
+    width: 100vw;
+    height: 100vh;
+    margin: unset;
+    background-color: #f7f7f7;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+.text-center {
+    text-align: center;
+}
+
+.relative {
+    position: relative;
+}
+
+.arrow {
+    left: calc(50% - 175px);
+    position: absolute;
+
+}
+
+.section_wrapper {
+    width: 375px;
+    margin: auto;
+    padding-top: 40px;
+}
+
+.header_wrapper {
+    width: 375px;
+    height: 20px;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+
+}
+
+.font14 {
+    font-size: 14px;
+}
+
+.font12 {
+    font-size: 12px;
+}
+
+.font26 {
+    font-size: 26px;
+}
+
+.font16 {
+    font-size: 16px;
+}
+
+.font21 {
+    font-size: 21px;
+}
+
+.default_color {
+    color: #30334C;
+}
+
+.opacity50 {
+    opacity: 0.5;
+}
+
+.opacity60 {
+    opacity: 0.6;
+}
+
+.opacity90 {
+    opacity: 0.9;
+}
+
+.opacity30 {
+    opacity: 0.3;
+}
+
+.confirm_box {
+    width: 340px;
+    height: 72px;
+    margin: auto;
+    margin-bottom: 15px;
+    background-color: #ffffff;
+    box-shadow: 0px 2px 15px rgba(6, 69, 104, 0.1);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.confirm_box:hover {
+    background-color: #30334C;
+    color: #ffffff;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.product_info_wrapper {
+    width: 340px;
+    height: 310px;
+    background-color: #ffffff;
+    box-shadow: 0px 2px 15px rgba(6, 69, 104, 0.05);
+    border-radius: 10px;
+    padding: 22px;
+    box-sizing: border-box;
+    margin: auto;
+}
+
+.hr {
+    width: 340px;
+    height: 0px;
+    margin-left: -22px;
+    margin-top: 28px;
+    margin-bottom: 21px;
+    border: 0.2px solid rgba(48, 51, 76, 0.05);
+}
+
+.product_upper_wrapper {
+    display: flex;
+}
+
+.product_upper_img {
+    margin-right: 16px;
+}
+
+.phone_button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 6px 12px;
+    color: rgba(48, 51, 76, 0.6);
+
+    width: 120px;
+    height: 30px;
+
+    background: #FFFFFF;
+    border: 1px solid #EEEEEE;
+    box-sizing: border-box;
+    border-radius: 20px;
+}
+
+.phone_button:hover {
+    color: rgba(255, 255, 255, 0.95);
+    background: #30334C;
+    border: 1px solid #EEEEEE;
+    box-sizing: border-box;
+    border-radius: 20px;
+}
+
+.product_lower_wrapper {
+
+}
+
+.product_lower_info_wrapper {
+    display: flex;
+}
+
+.product_info_left {
+    width: 100px;
+}
+
+.logistics_wrapper {
+    width: 322px;
+    height: 95px;
+
+    background: #FFFFFF;
+    box-shadow: 0 3px 15px rgba(6, 69, 104, 0.11);
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin: auto;
+    margin-bottom: 16px;
+    padding: 16px;
+}
+
+.logistics_upper {
+    margin-bottom: 13px;
+    position: relative;
+}
+
+.logistics_lower {
+    display: flex;
+    align-items: center;
+}
+
+.concern_wrapper {
+    background: #FFE6E6;
+    border: 1px solid #FF3F3F;
+    box-sizing: border-box;
+    box-shadow: 0px 3px 15px rgba(6, 69, 104, 0.11);
+    border-radius: 10px;
+}
+
+.logistics_right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #FF3F3F;
+}
+
+.progress_status {
+    background: #30334C;
+    border-radius: 30px;
+    padding: 6px 14px 6px 10px;
+    width: 72px;
+    height: 33px;
+    box-sizing: border-box;
+    color: #ffffff;
+    margin-right: 9px;
+    display: flex;
+    align-items: center;
+}
+.condition_detail_upper_wrapper {
+    margin-left: calc(187.5px - 50vw );
+    width: 100vw;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 48.25px;
+}
+.condition_detail_lower_wrapper {
+    width: 313px;
+    padding-top: 31px;
+    padding-left: 23px;
+    padding-right: 39px;
+}
+.condition_detail_row {
+    display: flex;
+    min-height: 48px;
+}
+.row_left {
+    width: 91px;
+    color: rgba(48, 51, 76, 0.3);
+}
+.row_right {
+    max-width: 222px;
+    max-height: 40px;
+    color: rgba(48, 51, 76, 0.8);
+}
+
+.condition_detail_footer {
+
+}

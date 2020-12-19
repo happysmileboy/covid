@@ -1,0 +1,31 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Title</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="//code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <link href="{% static 'css/base.css' %}?ver=1.18" rel="stylesheet">
+    <script src="{% static 'js/base.js' %}?ver=1.06"></script>
+
+
+</head>
+<body class="default_color">
+    <header class="header_wrapper">
+        {% block header %}
+        {% endblock %}
+    </header>
+    <section class="section_wrapper">
+        {% block section %}
+        {% endblock %}
+    </section>
+    <footer style="text-align:center;margin-top:31px;font-style: normal;font-weight: 500;font-size: 11px;line-height: 13px;color: rgba(48, 51, 76, 0.4);">
+        <p>Powered by Link Blockchain</p>
+    </footer>
+</body>
+</html>

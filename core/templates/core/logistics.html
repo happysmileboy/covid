@@ -1,0 +1,55 @@
+{% extends 'index.html' %}
+{% load static %}
+
+{% block header %}
+    <a href="{% url 'home' vaccine_type=vaccine_type pk=vaccine_pk %}">
+        <img class="arrow" src="{% static 'img/Arrow.png' %}"/>
+    </a>
+    <p>{{ vaccine_type.name }}_{{ vaccine_pk }}</p>
+{% endblock %}
+{% block section %}
+    <div>
+        {% for item in logistics %}
+            <a href="{% url 'condition_detail' vaccine_type=vaccine_type vaccine_pk=vaccine_pk logistics_pk=item.pk %}">
+            {% if item.unnormal %}
+                <div class="logistics_wrapper concern_wrapper">
+                    <div class="logistics_upper font14">
+                        <div>2021.02.06</div>
+                        <div class="logistics_right bold">이상 온도 탐지</div>
+                    </div>
+                    <div class="logistics_lower">
+                        <div class="progress_status font14">
+                            {% if item.progress_type == 1 %}
+                                출고
+                            {% elif item.progress_type == 2 %}
+                                이송
+                            {% else %}
+                                보관
+                            {% endif %}
+                        </div>
+                        <div class="font21 bold">푸른내과의원</div>
+                    </div>
+                </div>
+            {% else %}
+                <div class="logistics_wrapper">
+                    <div class="logistics_upper font14">
+                        <div>2021.02.06</div>
+                    </div>
+                    <div class="logistics_lower">
+                        <div class="progress_status font14">
+                            {% if item.progress_type == 1 %}
+                                출고
+                            {% elif item.progress_type == 2 %}
+                                이송
+                            {% else %}
+                                보관
+                            {% endif %}
+                        </div>
+                        <div class="font21 bold">푸른내과의원</div>
+                    </div>
+                </div>
+            {% endif %}
+            </a>
+        {% endfor %}
+    </div>
+{% endblock %}
