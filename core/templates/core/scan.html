@@ -1,6 +1,26 @@
 {% extends 'index.html' %}
 {% load static %}
 
+{% block header %}
+    <script>
+        function df() {
+            alert('QR코드 스캔서비스를 준비중입니다.');
+        }
+    </script>
+    <img src="{% static 'img/vaccine.png' %}"
+         style="position: absolute; top:0; left: 0; z-index: 1"/>
+    <img src="{% static 'img/qr.png' %}"
+        style="position: absolute; z-index: 5; top:250px; left: calc(50vw - 162px)"
+    >
+    <div class="qr_box" onclick="df()">
+        <a href="{% url 'vaccine_list' %}">
+        <p>백신 QR코드를 스캔합니다</p>
+            </a>
+    </div>
+
+{% endblock %}
 {% block section %}
-    dddd
+    <div>
+
+    </div>
 {% endblock %}

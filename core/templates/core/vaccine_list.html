@@ -1,0 +1,18 @@
+{% extends 'index.html' %}
+{% load static %}
+
+{% block header %}
+{% endblock %}
+{% block section %}
+    <div>
+        <p>
+            <a href="{% url 'home' vaccine_type='Cov_Az' pk=110005 %}">Cov_Az_110005</a>
+        </p>
+        <p>
+            <a href="{% url 'home' vaccine_type='Cov_Md' pk=100302 %}">Cov_Md_100302</a>
+        </p>
+        <p>
+            <a href="{% url 'home' vaccine_type='Cov_Pf' pk=100004 %}">Cov_Pf_100004</a>
+        </p>
+    </div>
+{% endblock %}

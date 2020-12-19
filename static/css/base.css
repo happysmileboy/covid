@@ -3,12 +3,14 @@ html, body {
     height: 100vh;
     margin: unset;
     background-color: #f7f7f7;
+    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
 }
 
 a {
     text-decoration: none;
     color: inherit;
 }
+
 .text-center {
     text-align: center;
 }
@@ -207,37 +209,44 @@ a {
 .progress_status {
     background: #30334C;
     border-radius: 30px;
-    padding: 6px 14px 6px 10px;
-    width: 72px;
+    padding: 6px 10px 6px 10px;
+    width: 50px;
     height: 33px;
     box-sizing: border-box;
+    justify-content: center;
     color: #ffffff;
     margin-right: 9px;
     display: flex;
     align-items: center;
+
 }
+
 .condition_detail_upper_wrapper {
-    margin-left: calc(187.5px - 50vw );
+    margin-left: calc(187.5px - 50vw);
     width: 100vw;
     background-color: #ffffff;
     display: flex;
     justify-content: center;
     padding-bottom: 48.25px;
 }
+
 .condition_detail_lower_wrapper {
     width: 313px;
     padding-top: 31px;
     padding-left: 23px;
     padding-right: 39px;
 }
+
 .condition_detail_row {
     display: flex;
     min-height: 48px;
 }
+
 .row_left {
     width: 91px;
     color: rgba(48, 51, 76, 0.3);
 }
+
 .row_right {
     max-width: 222px;
     max-height: 40px;
@@ -246,4 +255,17 @@ a {
 
 .condition_detail_footer {
 
+}
+
+.qr_box {
+    width: 328px;
+    position: absolute;
+    z-index: 5;
+    text-align: center;
+    align-content: center;
+    top: 631px;
+    left: calc(50vw - 164px);
+    background: #30334C;
+    border-radius: 10px;
+    color: #ffffff
 }

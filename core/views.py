@@ -19,6 +19,13 @@ admin_name = dict(
     SJH0285='손준혁'
 )
 
+def scan(request):
+    return render(request, 'core/scan.html')
+
+
+def vaccine_list(request):
+    return render(request, 'core/vaccine_list.html')
+
 def home(request, vaccine_type, pk):
     try:
         vaccine_type = VaccineType.objects.get(name=vaccine_type)
@@ -27,7 +34,9 @@ def home(request, vaccine_type, pk):
     logistics = Logistics.objects.filter(vaccine_type=vaccine_type, _from__lte=pk, _to__gte=pk)
     last_logistics = logistics.last()
     unnormal = False
-    if logistics.exclude(temp__lte=vaccine_type.min_temp, temp__gte=vaccine_type.max_temp).exists():
+    if logistics.filter(temp__lte=vaccine_type.min_temp).exists():
+        unnormal = True
+    elif logistics.filter(temp__gte=vaccine_type.max_temp).exists():
         unnormal = True
 
     etx = dict(
